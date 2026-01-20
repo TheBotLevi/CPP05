@@ -13,3 +13,25 @@ catch (ExceptionType& e) {
         // the code that handles the exception
 }
 
+-------------------------------------------------------------------
+
+## What are nested classes?
+
+Nested classes are simply said, a class which is declared **inside** another class like so:
+
+class myClass {
+        ...
+
+        class myNestedClass {
+                ...
+        };
+};
+
+to access a class in the nested class you do this:
+
+void myClass::myNestedClass::myFunction(char param, ...) {
+        ...
+}
+
+-------------------------------------------------------------------
+

@@ -6,7 +6,7 @@
 /*   By: ljeribha <ljeribha@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/16 14:38:56 by ljeribha          #+#    #+#             */
-/*   Updated: 2026/01/19 11:02:39 by ljeribha         ###   ########.fr       */
+/*   Updated: 2026/01/19 13:34:42 by ljeribha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,18 +17,28 @@
 
 class Bureaucrat {
     private:
-        std::string _name;
+        std::string _bureaucratName;
+		unsigned int _bureaucratGrade;
     public:
-        Bureaucrat(const std::string& name);
+        Bureaucrat(const std::string& name, unsigned int grade);
         Bureaucrat(const Bureaucrat& other);
         Bureaucrat& operator=(const Bureaucrat& other);
         ~Bureaucrat();
 
-    	void getName(const std::string& name) const;
-    	void getGrade(unsigned int grade) const;
+    	std::string getName() const;
+		void setName(const std::string name);
+    	unsigned int getGrade() const;
+		void setGrade(unsigned int grade);
+
+		class GradeTooHighException : public std::exception {
+    		public:
+				const char* what() const noexcept;
+		};
+
+		class GradeTooLowException : public std::exception {
+			public:
+				const char* what() const noexcept;
+		};
 };
 
-class MyException : public std::exception {
-    public:
-		const char* what() const noexcept;
-}
+std::ostream& operator<<(std::ostream& os, Bureaucrat& bureaucrat);
