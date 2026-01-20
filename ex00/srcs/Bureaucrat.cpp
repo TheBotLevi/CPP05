@@ -6,7 +6,7 @@
 /*   By: ljeribha <ljeribha@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/16 14:39:35 by ljeribha          #+#    #+#             */
-/*   Updated: 2026/01/20 11:49:40 by ljeribha         ###   ########.fr       */
+/*   Updated: 2026/01/20 14:05:52 by ljeribha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ void Bureaucrat::setGrade(unsigned int grade) {
 }
 
 const char* Bureaucrat::GradeTooHighException::what() const throw() {
-        return "overriden GradeTooHeighException what() function";
+        return "overriden GradeTooHighException what() function";
 }
 
 const char* Bureaucrat::GradeTooLowException::what() const throw() {
@@ -64,5 +64,6 @@ const char* Bureaucrat::GradeTooLowException::what() const throw() {
 }
 
 std::ostream& operator<<(std::ostream& os, Bureaucrat& bureaucrat) {
+        os << bureaucrat.getName() << ", bureaucrat grade " << bureaucrat.getGrade() << ".\n";
         return os;
 }
