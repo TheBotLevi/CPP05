@@ -29,9 +29,9 @@ Nested classes are simply said, a class which is declared **inside** another cla
 
 to access a class in the nested class you do this:
 
-void myClass::myNestedClass::myFunction(char param, ...) {
-        ...
-}
+        void myClass::myNestedClass::myFunction(char param, ...) {
+                ...
+        }
 
 -------------------------------------------------------------------
 
