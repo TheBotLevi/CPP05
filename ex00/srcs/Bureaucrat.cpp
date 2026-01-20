@@ -6,7 +6,7 @@
 /*   By: ljeribha <ljeribha@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/16 14:39:35 by ljeribha          #+#    #+#             */
-/*   Updated: 2026/01/19 15:21:03 by ljeribha         ###   ########.fr       */
+/*   Updated: 2026/01/20 11:49:40 by ljeribha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,11 +55,11 @@ void Bureaucrat::setGrade(unsigned int grade) {
         _bureaucratGrade = grade;
 }
 
-const char* Bureaucrat::GradeTooHighException::what() const noexcept {
+const char* Bureaucrat::GradeTooHighException::what() const throw() {
         return "overriden GradeTooHeighException what() function";
 }
 
-const char* Bureaucrat::GradeTooLowException::what() const noexcept {
+const char* Bureaucrat::GradeTooLowException::what() const throw() {
         return "overriden GradeTooLowException what() function";
 }
 
