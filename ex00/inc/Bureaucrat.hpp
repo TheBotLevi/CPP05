@@ -6,7 +6,7 @@
 /*   By: ljeribha <ljeribha@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/16 14:38:56 by ljeribha          #+#    #+#             */
-/*   Updated: 2026/01/20 11:49:59 by ljeribha         ###   ########.fr       */
+/*   Updated: 2026/01/21 12:21:52 by ljeribha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,9 @@ class Bureaucrat {
 		void setName(const std::string name);
     	unsigned int getGrade() const;
 		void setGrade(unsigned int grade);
+
+		void incrementGrade();
+		void decrementGrade();
 
 		class GradeTooHighException : public std::exception {
     		public:

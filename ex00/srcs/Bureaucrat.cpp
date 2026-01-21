@@ -6,7 +6,7 @@
 /*   By: ljeribha <ljeribha@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/16 14:39:35 by ljeribha          #+#    #+#             */
-/*   Updated: 2026/01/20 14:05:52 by ljeribha         ###   ########.fr       */
+/*   Updated: 2026/01/21 12:36:36 by ljeribha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,15 +55,30 @@ void Bureaucrat::setGrade(unsigned int grade) {
         _bureaucratGrade = grade;
 }
 
+void Bureaucrat::incrementGrade()
+{
+        _bureaucratGrade--;
+        if (_bureaucratGrade < 1)
+                throw Bureaucrat::GradeTooLowException();
+}
+
+void Bureaucrat::decrementGrade()
+{
+        _bureaucratGrade++;
+        if (_bureaucratGrade > 150)
+                throw Bureaucrat::GradeTooHighException();
+}
+
+
 const char* Bureaucrat::GradeTooHighException::what() const throw() {
-        return "overriden GradeTooHighException what() function";
+        return "Bureaucrat::GradeTooHighException";
 }
 
 const char* Bureaucrat::GradeTooLowException::what() const throw() {
-        return "overriden GradeTooLowException what() function";
+        return "Bureaucrat::GradeTooLowException";
 }
 
 std::ostream& operator<<(std::ostream& os, Bureaucrat& bureaucrat) {
-        os << bureaucrat.getName() << ", bureaucrat grade " << bureaucrat.getGrade() << ".\n";
+        os << bureaucrat.getName() << ", bureaucrat grade " << bureaucrat.getGrade() << ".";
         return os;
 }
