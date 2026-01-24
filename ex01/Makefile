@@ -1,6 +1,6 @@
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
-SRC = srcs/main.cpp srcs/Bureaucrat.cpp
+SRC = srcs/main.cpp srcs/Bureaucrat.cpp srcs/Form.cpp
 OBJDIR = objs
 OBJ = $(SRC:srcs/%.cpp=$(OBJDIR)/%.o)
 TARGET = Bureaucrat

@@ -6,7 +6,7 @@
 /*   By: ljeribha <ljeribha@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 14:25:13 by ljeribha          #+#    #+#             */
-/*   Updated: 2026/01/21 15:34:28 by ljeribha         ###   ########.fr       */
+/*   Updated: 2026/01/24 13:55:51 by ljeribha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 #include <iostream>
 #include <exception>
-#include "Bureaucrat.hpp"
+
+class Bureaucrat;
 
 class Form {
     private:
@@ -28,12 +29,12 @@ class Form {
         Form& operator=(const Form& other);
         ~Form();
 
-        void getName();
+        std::string getName();
         bool isSigned();
         int getGradeToSign();
         int getGradeToExecute();
         
-        Form& beSigned(Bureaucrat const &); //when this function is called, the bureaucrat signs the form
+        Form& beSigned(const Bureaucrat &other); //when this function is called, the "bureaucrat" signs the "form"
 
         class GradeTooHighException : public std::exception {
     	    public:
