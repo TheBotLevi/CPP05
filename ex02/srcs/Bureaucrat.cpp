@@ -6,7 +6,7 @@
 /*   By: levi_jeri <levi_jeri@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/16 14:39:35 by ljeribha          #+#    #+#             */
-/*   Updated: 2026/01/24 23:17:24 by levi_jeri        ###   ########.fr       */
+/*   Updated: 2026/01/25 20:19:36 by levi_jeri        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,7 @@ std::ostream& operator<<(std::ostream& os, Bureaucrat& bureaucrat) {
     return os;
 }
 
-void Bureaucrat::signForm(Form &form) {
+void Bureaucrat::signForm(AForm &form) {
     try {
         form.beSigned(*this);
         std::cout << _bureaucratName << " signed " << form.getName() << std::endl;

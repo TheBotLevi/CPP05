@@ -73,5 +73,24 @@ not it's: (C++98)
 
 --------------------------------------------------------------------
 
-## Bureaucrat Form
+## Bureaucrat Form (ex01)
 
+in this exercise we implement a Form class, which we can use to assign to a bureaucrat. First we create an object with the class Form like:
+
+    Form texForm("Tax Form", 100, 50);
+
+100 being minimum grade for being signed and 50 minimum grade for being executed. (which we will apparently see in ex02)
+
+After creating the Form object we use the signForm(Form &form) function to make a specific Bureaucrat sign the Form. Something like this:
+
+    Bureaucrat joe("Joe", 50);
+
+    joe.signForm(taxForm);
+
+where inside the signForm function there is the function beSigned() called which does the check if the grade has the minimum requirements, if not it will throw an exception. If yes, the Form gets assigned to the Bureaucrat joe.
+
+-------------------------------------------------------------------------
+
+## Execute Form (ex02)
+
+in this exercise class Form becomes an abstract class.
