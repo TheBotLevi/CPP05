@@ -6,7 +6,7 @@
 /*   By: levi_jeri <levi_jeri@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 17:24:16 by levi_jeri         #+#    #+#             */
-/*   Updated: 2026/01/29 11:55:04 by levi_jeri        ###   ########.fr       */
+/*   Updated: 2026/01/29 12:20:19 by levi_jeri        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,22 @@ ShrubberyCreationForm::~ShrubberyCreationForm() {
 
 void ShrubberyCreationForm::executeAction() {
     //creates a file <target>_shrubbery in the working directory and writes ASCII trees inside it
+    std::ofstream shrubberyCreationFormFile("_shrubbery");
     
+    shrubberyCreationFormFile << 
+    "    oxoxoo    ooxoo"
+    "  ooxoxo oo  oxoxooo"
+    " oooo xxoxoo ooo ooox"
+    " oxo o oxoxo  xoxxoxo"
+    "  oxo xooxoooo o ooo"
+    "    ooo\oo\  /o/o"
+    "        \  \/ /"
+    "         |   /"
+    "         |  |"
+    "         | D|"
+    "         |  |"
+    "         |  |"
+    "  ______/____\"____";
+
+    shrubberyCreationFormFile.close();
 }

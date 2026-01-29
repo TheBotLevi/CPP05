@@ -47,6 +47,10 @@ const char* AForm::GradeTooLowException::what() const throw() {
     return "AForm::GradeTooLowException";
 }
 
+const char* AForm::FormNotSignedException::what() const throw() {
+    return "AForm::FormNotSignedException";
+}
+
 std::string AForm::getName() {
     return _name;
 }
@@ -73,4 +77,8 @@ AForm& AForm::beSigned(const Bureaucrat &other) {
 std::ostream& operator<<(std::ostream& os, AForm& form) {
     os << "AForm " << form.getName() << ", signed: " << form.isSigned() << ", grade to sign: " << form.getGradeToSign() << ", grade to execute: " << form.getGradeToExecute();
     return os;
+}
+
+void AForm::execute(Bureaucrat const & executor) {
+    //try and catch all the executeForm functions
 }

@@ -6,7 +6,7 @@
 /*   By: levi_jeri <levi_jeri@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 14:25:13 by ljeribha          #+#    #+#             */
-/*   Updated: 2026/01/27 17:16:38 by levi_jeri        ###   ########.fr       */
+/*   Updated: 2026/01/29 12:20:53 by levi_jeri        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 #include <iostream>
 #include <exception>
+#include <fstream>
 
 class Bureaucrat;
 
@@ -38,9 +39,7 @@ class AForm {
         
         AForm& beSigned(const Bureaucrat &other); //when this function is called, the "bureaucrat" signs the "form"
 
-        void execute(Bureaucrat const & executor) {
-            std::cout << "Catch and throw the executeAction functions!\n";
-        }
+        void execute(Bureaucrat const & executor);
 
         class GradeTooHighException : public std::exception {
     	    public:
@@ -51,6 +50,11 @@ class AForm {
 		    public:
 			    const char* what() const throw();
 	    };
+
+        class FormNotSignedException : public std::exception {
+            public:
+                const char* what() const throw();
+        };
 };
 
 std::ostream& operator<<(std::ostream& os, AForm& form);

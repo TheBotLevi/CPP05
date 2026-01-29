@@ -167,3 +167,17 @@ is in the Bureaucrat.hpp file, and is similar to signForm() from ex01 but for th
     <bureaucrat> executed <form>
 
 --------------------------------------------------------------------
+
+"    oxoxoo    ooxoo"
+"  ooxoxo oo  oxoxooo"
+" oooo xxoxoo ooo ooox"
+" oxo o oxoxo  xoxxoxo"
+"  oxo xooxoooo o ooo"
+"    ooo\oo\  /o/o"
+"        \  \/ /"
+"         |   /"
+"         |  |"
+"         | D|"
+"         |  |"
+"         |  |"
+"  ______/____\"____"
