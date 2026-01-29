@@ -6,7 +6,7 @@
 /*   By: levi_jeri <levi_jeri@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 14:25:13 by ljeribha          #+#    #+#             */
-/*   Updated: 2026/01/25 21:20:25 by levi_jeri        ###   ########.fr       */
+/*   Updated: 2026/01/27 17:16:38 by levi_jeri        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@
 class Bureaucrat;
 
 class AForm {
+    protected:
+        virtual void executeAction() const = 0;
     private:
         const std::string _name;
         bool _signed;
@@ -36,7 +38,9 @@ class AForm {
         
         AForm& beSigned(const Bureaucrat &other); //when this function is called, the "bureaucrat" signs the "form"
 
-        virtual void execute(Bureaucrat const & executor) const = 0;
+        void execute(Bureaucrat const & executor) {
+            std::cout << "Catch and throw the executeAction functions!\n";
+        }
 
         class GradeTooHighException : public std::exception {
     	    public:
