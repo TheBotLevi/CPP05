@@ -135,7 +135,9 @@ Creating a file in C++ (recap):
     outfile.close();
 
 ofstream ➔ creates and writes to files
+
 ifstream ➔ reads from files
+
 fstream ➔ a combination of ofstream and ifstream: creates, reads and writes to files (all in one)
 
 --------------------------------------------------------------------
