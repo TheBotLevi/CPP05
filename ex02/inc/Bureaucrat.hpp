@@ -6,7 +6,7 @@
 /*   By: levi_jeri <levi_jeri@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/16 14:38:56 by ljeribha          #+#    #+#             */
-/*   Updated: 2026/01/27 17:17:28 by levi_jeri        ###   ########.fr       */
+/*   Updated: 2026/01/29 16:12:16 by levi_jeri        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ class Bureaucrat {
 
 		void signForm(AForm &form);
 
-		void executeForm(const AForm &form);
+		void executeForm(AForm &form);
 
 		class GradeTooHighException : public std::exception {
     		public:

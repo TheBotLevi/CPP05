@@ -1,29 +1,14 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   RobotomyRequestForm.cpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: levi_jeri <levi_jeri@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/16 16:50:38 by ljeribha          #+#    #+#             */
-/*   Updated: 2026/01/30 11:43:36 by levi_jeri        ###   ########.fr       */
+/*   Created: 2026/01/30 12:16:22 by levi_jeri         #+#    #+#             */
+/*   Updated: 2026/01/30 12:16:38 by levi_jeri        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/Bureaucrat.hpp"
-#include "../inc/AForm.hpp"
-#include "../inc/ShrubberyCreationForm.hpp"
+#include "../inc/RobotomyRequestForm.hpp"
 
-int main() {
-    Bureaucrat arttu("Arttu", 1);
-    Bureaucrat kevin("Kevin", 150);
-
-    ShrubberyCreationForm shrub("garden");
-
-    arttu.signForm(shrub);
-    arttu.executeForm(shrub);
-
-    kevin.executeForm(shrub);
-    
-    return 0;
-}

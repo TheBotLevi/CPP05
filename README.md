@@ -181,3 +181,21 @@ is in the Bureaucrat.hpp file, and is similar to signForm() from ex01 but for th
 "         |  |"
 "         |  |"
 "  ______/____\"____"
+
+--------------------------------------------------------------------
+
+## basic_string::c_str()
+
+The basic_string::c_str() is a built-in C++ function. It takes a string and return a char*, for example in ex02, to print the ascii tree into a file named:
+
+    <target>_shrubbery
+
+so in this case, our "target" variable is an std::string and we need to convert it to a char* since std::ofstream only accepts char*. Otherwise we will not be able to do this:
+
+    std::ofstream shrubberyCreationFormFile((this->_target + "_shrubbery"));
+
+so we add the c_str() function to convert, like so:
+
+    std::ofstream shrubberyCreationFormFile((this->_target + "_shrubbery").c_str());
+
+--------------------------------------------------------------------

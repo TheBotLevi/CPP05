@@ -81,4 +81,9 @@ std::ostream& operator<<(std::ostream& os, AForm& form) {
 
 void AForm::execute(Bureaucrat const & executor) {
     //try and catch all the executeForm functions
+    if(!_signed)
+        throw FormNotSignedException();
+    if (executor.getGrade() > this->_gradeToExecute)
+        throw GradeTooLowException();
+    this->executeAction();
 }

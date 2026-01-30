@@ -6,7 +6,7 @@
 /*   By: levi_jeri <levi_jeri@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/25 20:37:21 by levi_jeri         #+#    #+#             */
-/*   Updated: 2026/01/28 15:45:51 by levi_jeri        ###   ########.fr       */
+/*   Updated: 2026/01/30 11:33:12 by levi_jeri        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,7 @@
 
 class ShrubberyCreationForm : public AForm {
     protected:
-        virtual void executeAction() {
-            std::cout << "Overriding the execute function here, the whole logic of the execution!\n";
-        }
+        virtual void executeAction() const;
     private:
         std::string _target;
     public:

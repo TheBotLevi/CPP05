@@ -6,7 +6,7 @@
 /*   By: levi_jeri <levi_jeri@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/16 14:39:35 by ljeribha          #+#    #+#             */
-/*   Updated: 2026/01/25 20:19:36 by levi_jeri        ###   ########.fr       */
+/*   Updated: 2026/01/30 11:47:54 by levi_jeri        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,5 +90,15 @@ void Bureaucrat::signForm(AForm &form) {
     }
     catch (std::exception &e) {
         std::cout << _bureaucratName << " couldn't sign " << form.getName() << " because " << e.what() << std::endl;
+    }
+}
+
+void Bureaucrat::executeForm(AForm &form) {
+    try {
+        form.execute(*this);
+        std::cout << this->getName() << " executed " << form.getName() << std::endl;
+    }
+    catch (std::exception &e) {
+        std::cout << this->getName() << " execution failed: " << e.what() << std::endl;
     }
 }
