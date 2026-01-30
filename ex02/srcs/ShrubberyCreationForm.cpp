@@ -6,7 +6,7 @@
 /*   By: levi_jeri <levi_jeri@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 17:24:16 by levi_jeri         #+#    #+#             */
-/*   Updated: 2026/01/30 12:08:46 by levi_jeri        ###   ########.fr       */
+/*   Updated: 2026/01/30 15:07:28 by levi_jeri        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@ ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm& other)
 }
 
 ShrubberyCreationForm& ShrubberyCreationForm::operator=(const ShrubberyCreationForm& other) {
-    std::cout << "ShrubberyCreationForm assignment operator called!\n";
     if (this != &other) {
         this->_target = other._target;
+        std::cout << "ShrubberyCreationForm assignment operator called!\n";
     }
     return *this;
 }

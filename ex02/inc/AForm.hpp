@@ -6,11 +6,14 @@
 /*   By: levi_jeri <levi_jeri@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 14:25:13 by ljeribha          #+#    #+#             */
-/*   Updated: 2026/01/29 12:20:53 by levi_jeri        ###   ########.fr       */
+/*   Updated: 2026/01/30 15:40:10 by levi_jeri        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
+
+#define RESET   "\033[0m"
+#define RED     "\033[1;31m"
 
 #include <iostream>
 #include <exception>
