@@ -6,7 +6,7 @@
 /*   By: levi_jeri <levi_jeri@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/16 16:50:38 by ljeribha          #+#    #+#             */
-/*   Updated: 2026/01/30 15:42:25 by levi_jeri        ###   ########.fr       */
+/*   Updated: 2026/01/30 16:44:10 by levi_jeri        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 #include "../inc/ShrubberyCreationForm.hpp"
 #include "../inc/RobotomyRequestForm.hpp"
 #include "../inc/PresidentialPardonForm.hpp"
+#include "../inc/Intern.hpp"
 #include <cstdlib>
 #include <ctime>
 #include <iostream>
@@ -68,5 +69,12 @@ int main() {
         no.executeForm(pardonForm);
     }
 
+    std::cout << RED << "\n========================================" << std::endl;
+    std::cout << "= Intern (ex03 style) =" << std::endl;
+    std::cout << "========================================" << RESET << std::endl;
+    {
+        Intern intern;
+        AForm* form = intern.makeForm("shrubbery creation", "home");
+    }
     return 0;
 }

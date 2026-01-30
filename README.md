@@ -199,3 +199,19 @@ so we add the c_str() function to convert, like so:
     std::ofstream shrubberyCreationFormFile((this->_target + "_shrubbery").c_str());
 
 --------------------------------------------------------------------
+
+## ex03 (Intern)
+
+In this excercise, we implement a class called Intern and this intern will have a member function called "makeForm(string formName, string target);" which takes 2 strings as parameters.
+
+The use of this is, instead of doing something like this:
+
+    ShrubberyCreationForm shrub("home");
+    RobotomyRequestForm robot("Bender");
+
+an intern will create them for you like so:
+
+    Intern intern;
+    AForm* form = intern.makeForm("shrubbery creation", "home");
+    AForm* form = intern.makeForm("robotomy request", "bender");
+
